@@ -13,10 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => ProviderCounter(),
+      create: (_) => ProviderCounter(),
       child: MaterialApp(
-        title: 'State Management Example',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          useMaterial3: false,
           primarySwatch: Colors.blue,
         ),
         home: const CountExample(),
